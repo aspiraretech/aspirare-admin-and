@@ -1,0 +1,35 @@
+<ion-view title="{{subject.Name}}">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-icon ion-arrow-down-b" ng-click="openPopover2($event)"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div ng-repeat="chapter in chaptersToShow">
+            <ion-item class="item-stable" ng-click="toggleChapter(chapter)" ng-class="{active: isChapterShown(chapter)}">
+                <i class="icon" ng-class="isChapterShown(chapter) ? 'ion-minus' : 'ion-plus'" style="float:left;"></i>
+                <div style="overflow: hidden; text-overflow: ellipsis;width: 80%; float:left;">
+                    &nbsp;&nbsp;{{chapter.Name}}
+                </div>
+                <span ng-if="chapter.ChapterAverage != null" class="item-note scorecard-note" ng-class="{'google-green':chapter.ChapterAverage>=75, 'google-yellow' :(chapter.ChapterAverage<75 && chapter.ChapterAverage>=50), 'google-red': chapter.ChapterAverage<50}">
+                    {{chapter.ChapterAverage | number:1}} %
+                </span>
+            </ion-item>
+            <div class="topic-names item item-accordion item-icon-right" ng-show="isChapterShown(chapter)" ng-repeat="topic in chapter.Topics" style="padding:10px 16px;">
+                <div class="row no-padding">
+                    <div class="col no-padding col" style="white-space: normal;">
+                        {{topic.Name}}
+                    </div>
+                    <div class="col no-padding col-20 text-center" ng-if="topic.IsCompleted">
+                        <span class="item-note scorecard-note" ng-class="{'google-green':topic.TopicAverage>=75, 'google-yellow' :(topic.TopicAverage<75 && topic.TopicAverage>=50), 'google-red': topic.TopicAverage<50}">
+                            {{topic.TopicAverage | number:1}} %
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-if="chapters.length == 0">
+            <div class="col text-center">
+                No chapters available!
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

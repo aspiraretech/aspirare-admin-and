@@ -1,0 +1,56 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content edge-drag-threshold="true">
+        <ion-nav-bar class="bar-custom">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-content class="sidemenu-content">
+            <div class="row sidemenu-header logo-image" ng-style="{'background-image':'url(' + loggedInUser.LogoImageURL + ')'}">
+            </div>
+            <ion-list>
+                <ion-item class="item-icon-left" menu-close href="#/dashboard">
+                    <i class="icon custom ion-pie-graph"></i> Dashboard
+                </ion-item>
+                <ion-item class="item-icon-left" menu-close href="#/users">
+                    <i class="icon custom ion-android-people"></i> Users
+                </ion-item>
+                <ion-item class="item-icon-left" menu-close href="#/selectSemester">
+                    <i class="icon custom ion-university"></i> Students
+                </ion-item>
+                <ion-item class="item-icon-left" menu-close href="#/assignmentList" ng-if="loggedInUser.PackageCode == 'LM' ">
+                    <i class="icon custom ion-android-share-alt"></i> Shared with Class
+                </ion-item>
+                <!-- <ion-item class="item-icon-left" menu-close href="#/selectSubject" ng-if="loggedInUser.PackageCode == 'EXTENDED'">
+                    <i class="icon custom ion-ribbon-b"></i> Smart Assessment
+                </ion-item> -->
+                <ion-item class="item-icon-left" menu-close href="#/events">
+                    <i class="icon custom ion-speakerphone"></i> News & Events
+                </ion-item>
+                <ion-item class="item-icon-left" menu-close href="#/calendarList">
+                    <i class="icon custom ion-android-calendar"></i> Calendar
+                </ion-item>
+                <ion-item class="item-icon-left" menu-close href="#/notifications">
+                    <i class="icon custom ion-android-notifications"></i> Notifications
+                </ion-item>
+                <ion-item class="item-icon-left" menu-close href="#/expenses">
+                    <i class="icon custom ion-cash"></i> Expenses
+                </ion-item>
+                <ion-item class="item-icon-left" menu-close href="#/enquiries" ng-if="loggedInUser.PackageCode == 'LM' || loggedInUser.PackageCode == 'SMART' || loggedInUser.PackageCode == 'BASIC' || loggedInUser.Type == 'LM'">
+                    <i class="icon custom ion-information-circled"></i> Enquiries
+                </ion-item>
+                <ion-item class="item-icon-left" menu-close href="#/routeList" ng-if="loggedInUser.PackageCode == 'LM' || loggedInUser.PackageCode == 'SMART'">
+                    <i class="icon custom ion-navigate"></i> Routes
+                </ion-item>
+                <ion-item class="item-icon-left" menu-close href ng-click="logout();">
+                    <i class="icon custom ion-power"></i> Logout
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

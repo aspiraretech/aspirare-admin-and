@@ -1,0 +1,27 @@
+<ion-view title="{{subject.Name}}">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="getLessonPlan()">
+        </ion-refresher>
+        <div class="row" ng-if="chapters.length == 0">
+            <div class="col text-center">
+                No chapters are added yet!
+            </div>
+        </div>
+        <div class="list" ng-repeat="chapter in chapters | orderBy: 'DisplayOrder'" style="margin-bottom: 0px;">
+            <div class="item item-divider">
+                <div style="width: 85%; float: left; overflow: hidden; text-overflow: ellipsis;">
+                    {{chapter.Name}}
+                </div>
+                <span style="float:right;">
+                    {{chapter.ChapterAttendance}}
+                </span>
+            </div>
+            <div class="item" ng-repeat="topic in chapter.Topics" style="white-space: normal">
+                {{topic.Name}}
+                <span class="item-note">
+                    <span class="custom">{{topic.TopicAttendance}}</span>
+                </span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

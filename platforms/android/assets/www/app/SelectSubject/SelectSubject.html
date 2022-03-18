@@ -1,0 +1,39 @@
+<ion-view title="Select {{keywords.SubjectKeyword}}">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="getSemesters(20)">
+        </ion-refresher>
+        <div class="list">
+            <label class="item item-input item-select">
+                <div class="input-label custom">
+                    {{keywords.SemesterKeyword}}
+                </div>
+                <select ng-model="selected.semester" ng-options="semester.SemesterNumber for semester in semesters"  ng-change="semesterSelected(selected.semester)">
+                    <option value="">--pick one--</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label custom">
+                    {{keywords.ClassKeyword}}
+                </div>
+                <select ng-model="selected.class" ng-options="class.Name for class in classes"  ng-change="classSelected(selected.class)">
+                    <option value="">--pick one--</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label custom">
+                    {{keywords.SubjectKeyword}}
+                </div>
+                <select ng-model="selected.subject" ng-options="subject.Name for subject in subjects">
+                    <option value="">--pick one--</option>
+                </select>
+            </label>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="button button-custom loginButton" ng-click="getAssessments()">
+                    Get Smart Assessments&nbsp;<i class="icon ion-arrow-right-c"></i>
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

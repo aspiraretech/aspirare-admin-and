@@ -1,0 +1,40 @@
+<ion-view title="Create Calendar Event">
+    <ion-content>
+        <div class="list">
+            <li class="item item-toggle">
+                {{eventType}}
+                <label class="toggle toggle-custom">
+                    <input type="checkbox" ng-model="selected.eventType" ng-change="eventTypeChanged()">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <form name="eventForm">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label custom">Title (50 characters)</span>
+                    <input type="text" name="eventName" placeholder="Title" ng-model="newEvent.EventName">
+                </label>
+            </form>
+            <div class="item item-button-right custom">
+                Event Start Date
+                <button class="button button-custom" ng-click="openStartDatePicker($event);">
+                    {{newEvent.EventStartDate | date: 'dd-MMM-yyyy'}}
+                </button>
+            </div>
+            <div class="item item-button-right custom" ng-hide="selected.eventType">
+                Event End Date
+                <button class="button button-custom" ng-click="openEndDatePicker();">
+                    {{newEvent.EventEndDate | date: 'dd-MMM-yyyy'}}
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="button button-custom loginButton" ng-click="create()">
+                    Create
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

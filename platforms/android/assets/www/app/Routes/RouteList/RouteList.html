@@ -1,0 +1,22 @@
+<ion-view title="Routes">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-icon ion-plus-round" ng-click="addRoute()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="getAllRoutes()">
+        </ion-refresher>
+        <div class="list" ng-if="routes.length != 0">
+            <a class="item item-icon-right" href ng-repeat="route in routes | orderBy: 'RouteNumber' | filter:search" ng-click="routeSelected(route)">
+                <h2>{{route.RouteNumber}}</h2>
+                <p>{{route.AreasCovered}}</p>
+                <i class="icon ion-chevron-right custom"></i>
+            </a>
+        </div>
+        <div class="row no-padding" ng-if="routes.length == 0">
+            <img class="empty_list_img" src="app/images/routes.svg" alt="no image selected" />
+            <div class="col no-padding text-center empty_list_text">
+                No routes have been created yet!
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

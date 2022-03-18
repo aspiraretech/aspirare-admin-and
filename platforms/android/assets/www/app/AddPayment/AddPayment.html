@@ -1,0 +1,33 @@
+<ion-view title="Add Payment">
+    <ion-content>
+        <div class="list">
+            <form name="eventForm">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label custom">Fees Paid</span>
+                    <input type="number" name="feesPaid" placeholder="Fees Paid" ng-model="newPayment.FeesPaid">
+                </label>
+                <div class="item item-button-right custom">
+                    Payment Date
+                    <button class="button button-custom" ng-click="openPaymentDatePicker($event);">
+                    {{newPayment.PaymentDate | date: 'dd-MMM-yyyy'}}
+                </button>
+                </div>
+                <label class="item item-input item-stacked-label">
+                <span class="input-label custom">Payment Mode</span>
+                <input type="text" name="paymentMode" placeholder="Payment Mode" ng-model="newPayment.PaymentMode">
+            </label>
+                <label class="item item-input item-stacked-label">
+                <span class="input-label custom">Cheque/DD Number</span>
+                <input type="text" name="chequeNumber" placeholder="Cheque/DD Number" ng-model="newPayment.PaymentModeNumber">
+            </label>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="button button-custom loginButton" ng-click="addPayment()">
+                    Add
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
