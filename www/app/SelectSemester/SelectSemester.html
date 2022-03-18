@@ -1,0 +1,63 @@
+<ion-view title="Students">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="getAllCourses()">
+        </ion-refresher>
+        <div class="list">
+            <label class="item item-input item-select">
+                <div class="input-label custom">
+                    {{keywords.CourseKeyword}}
+                </div>
+                <select ng-model="selected.course" ng-options="course.Name for course in courses" ng-change="courseSelected(selected.course)">
+                    <option value="">--pick one--</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label custom">
+                    {{keywords.BranchKeyword}}
+                </div>
+                <select ng-model="selected.branch" ng-options="branch.Name for branch in branches" ng-change="branchSelected(selected.branch)">
+                    <option value="">--pick one--</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label custom">
+                    {{keywords.SemesterKeyword}}
+                </div>
+                <select ng-model="selected.semester" ng-options="semester.SemesterNumber for semester in semesters"  ng-change="semesterSelected(selected.semester)">
+                    <option value="">--pick one--</option>
+                </select>
+            </label>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="button button-custom loginButton" ng-click="getAllStudents()">
+                    Get Students&nbsp;<i class="icon ion-arrow-right-c"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="item item-divider">
+                App Installs
+            </div>
+            <div class="item">
+                Total Students
+                <span class="item-note" style="color:#222;">
+                    {{installMetrics.StudentCount}}
+                </span>
+            </div>
+            <div class="item">
+                Installations
+                <span class="item-note" style="color:#222;">
+                    {{installMetrics.InstallCount}}
+                </span>
+            </div>
+            <div class="item item-button-right" ng-if="(installMetrics.StudentCount - installMetrics.InstallCount) > 0">
+                <h2>Send Reminder</h2>
+                <button style="padding:0px 10px;" class="button button-custom button-small" ng-click="sendInstallReminder()">
+                    <i class="icon ion-paper-airplane"></i>
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

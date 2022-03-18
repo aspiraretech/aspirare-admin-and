@@ -1,0 +1,29 @@
+<ion-view title="Welcome {{name}}">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input item-select">
+                <div class="input-label custom">
+                    {{keywords.SubjectKeyword}}
+                </div>
+                <select ng-model="selected.subject" ng-options="subject.Name for subject in subjects" ng-change="subjectSelected(selected.subject)">
+                    <option value="">--pick one--</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label custom">
+                    {{keywords.ClassKeyword}}
+                </div>
+                <select ng-model="selected.class" ng-options="class.Name for class in classes" ng-change="classSelected(selected.class)">
+                    <option value="">--pick one--</option>
+                </select>
+            </label>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="button button-custom loginButton" ng-click="enterClass()">
+                    Take Attendance
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

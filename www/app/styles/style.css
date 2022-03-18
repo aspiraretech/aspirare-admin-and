@@ -1,0 +1,480 @@
+.loginButton {
+    width: 100%;
+}
+
+.textArea {
+    width: 100%;
+    padding: 3px;
+    border: 1px solid #c3c1c1;
+    border-radius: 3px;
+}
+
+.ionic_datepicker_popup .popup-body .selected_date_full,
+.ionic_datepicker_popup .selected_date,
+.ionic_datepicker_popup .popup-buttons button {
+    background-color: #4a79c9 !important;
+}
+
+.ionic_datepicker_popup .popup-body .month_select:after,
+.ionic_datepicker_popup .popup-body .year_select:after,
+.ionic_datepicker_popup .popup-body .button-clear {
+    color: #4a79c9 !important;
+}
+
+.select_section label,
+.ionic_datepicker_popup .selected_date,
+.ionic_datepicker_popup .today {
+    border-color: #4a79c9 !important;
+}
+
+.marksInput {
+    border: 1px solid #dddddd !important;
+    width: 50px;
+    text-align: center;
+    float: right;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.marksItem {
+    padding: 10px;
+}
+
+.current {
+    position: relative;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.gear-icon {
+    font-size: 20px;
+}
+
+.google-red {
+    color: #e33e2b;
+}
+
+.google-green {
+    color: #2ba14b;
+}
+
+.google-yellow {
+    color: #f1b500;
+}
+
+.button-float {
+    color: white !important;
+    z-index: 12 !important;
+    position: absolute !important;
+    bottom: 55px !important;
+    right: 15px !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+    height: 47px;
+    width: 47px;
+    min-width: 47px !important;
+}
+
+.button-float-enq {
+    color: white !important;
+    z-index: 50 !important;
+    position: absolute !important;
+    bottom: 25px !important;
+    right: 25px !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+    height: 47px;
+    width: 47px;
+    min-width: 47px !important;
+}
+
+.messages {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.messages li {
+    display: block;
+    clear: both;
+    max-width: 70%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.messages-mine {
+    float: right;
+    background: #bfc5ea;
+    color: #2c2c2c;
+}
+
+.messages-others {
+    float: left;
+    background: #E8EAF6;
+    color: #2c2c2c;
+}
+
+.bar-frosted {
+    background: #c3d8fc;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.messageInput {
+    width: 100%;
+    border-radius: 5px;
+    padding: 0px 5px !important;
+}
+
+.sent-by {
+    font-size: smaller;
+    font-weight: bold;
+    display: block;
+}
+
+.student-marks {
+    border: 1px solid gray !important;
+    padding-left: 5px !important;
+    width: 100%;
+}
+
+.collapsible-list .list .item.item-accordion {
+    line-height: 24px;
+    transition: 0.09s all linear;
+}
+
+.collapsible-list .list .item.item-accordion.ng-hide {
+    line-height: 0px;
+}
+
+.collapsible-list .list .item.item-accordion.ng-hide-add,
+.collapsible-list .list .item.item-accordion.ng-hide-remove {
+    display: block !important;
+}
+
+.topic-names .item-content {
+    overflow: visible;
+    text-overflow: initial;
+    white-space: normal;
+}
+
+.rating {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.rating li {
+    padding: 1px;
+    color: #ddd;
+    font-size: 35px;
+    text-shadow: .05em .05em #aaa;
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.rating li.filled {
+    color: #fd0;
+}
+
+.rating.readonly li.filled {
+    color: #666;
+}
+
+.average-rating-container {
+    position: relative;
+    height: 38px;
+    width: 90px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.average-rating-container .background,
+.average-rating-container .foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.collegeDropdown {
+    height: initial
+}
+
+.smallButtonIcon:before {
+    font-size: 25px !important;
+}
+
+.collapsible-list .list .item.item-accordion {
+    line-height: 24px;
+    transition: 0.1s all linear;
+    overflow: visible;
+    text-overflow: initial;
+    white-space: normal;
+}
+
+.collapsible-list .list .item.item-accordion.ng-hide {
+    line-height: 0px;
+}
+
+.collapsible-list .list .item.item-accordion.ng-hide-add,
+.collapsible-list .list .item.item-accordion.ng-hide-remove {
+    display: block !important;
+}
+
+.sidemenu-header {
+    height: 86px;
+    padding: 10px 10px;
+}
+
+.logo-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+tooltip tip {
+    min-width: 252px;
+    white-space: normal;
+    text-align: start;
+}
+
+.event-help-icon {
+    padding: 0px !important;
+    vertical-align: top !important;
+}
+
+.popover {
+    height: auto !important;
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.popover ion-header-bar {
+    position: relative;
+}
+
+.popover ion-content {
+    top: 0;
+    position: relative;
+}
+
+.gallery-item {
+    width: 33%;
+    padding: 10px;
+    display: inline-block;
+    overflow: hidden;
+    height: 112px;
+}
+
+.image-delete-button {
+    position: relative;
+    top: -12px;
+    right: -70px;
+    z-index: 99;
+}
+
+.transparent {
+    background: rgba(0, 0, 0, 0.7)!important;
+}
+
+.image-modal {
+    width: 100% !important;
+    height: 100%;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.fullscreen-image {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 679px) {
+    .active .modal-backdrop-bg {
+        opacity: .5;
+    }
+    .modal-backdrop-bg {
+        -webkit-transition: opacity 300ms ease-in-out;
+        transition: opacity 300ms ease-in-out;
+        background-color: #000;
+        opacity: 0;
+    }
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.logo-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.profile-top {
+    background: #4a79c9;
+    padding: 35px 0px 16px 0px;
+}
+
+.profile-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.profile-name {
+    padding: 5px 10px 0px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.swiper-slide {
+    overflow-y: scroll;
+    display: block;
+}
+
+.swiper-container-horizontal>.swiper-pagination {
+    display: none;
+}
+
+.item-action-button {
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 34px;
+}
+
+ion-slides {
+    height: calc(100% - 48px);
+}
+
+.has-subheader {
+    top: 94px;
+}
+
+.has-footer {
+    bottom: 50px;
+}
+
+.custom-footer {
+    height: 50px !important;
+}
+
+.button-footer-bar>button {
+    font-size: 16px !important;
+}
+
+.dashboard-numbers {
+    font-size: 15px;
+}
+
+.dashboard-border-right {
+    border-right: 1px solid #ffffff;
+}
+
+.slidingTabs.scroll-view.scroll-x {
+    overflow: auto !important;
+}
+
+#floating-menu {
+    width: 47px;
+    height: 47px;
+    line-height: 47px;
+}
+
+#floating-menu li span.label-container {
+    right: 55px;
+}
+
+@media screen and (orientation: portrait) {
+    img.empty_list_img {
+        max-width: 90%;
+    }
+    .empty_list_text {
+        top: 60%;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    img.empty_list_img {
+        max-height: 90%;
+    }
+    .empty_list_text {
+        top: 80%;
+    }
+}
+
+img.empty_list_img:empty {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+img.empty_list_img {
+    position: absolute;
+    max-width: 25%;
+    top: 10%;
+    left: 10%;
+    border-radius: 3px;
+}
+
+.empty_list_text {
+    position: absolute;
+}
+
+.descriptionField {
+    font-size: 14px;
+    padding: 6px 0px;
+    color: black;
+    white-space: normal;
+    background-color: #f8f8f8;
+}
+
+.descriptionLabel {
+    display: table;
+    padding: 7px 10px 7px 0px;
+    font-size: 16px;
+}
+
+.linkDescriptionBox {
+    padding: 6px 0px 5px 16px;
+}

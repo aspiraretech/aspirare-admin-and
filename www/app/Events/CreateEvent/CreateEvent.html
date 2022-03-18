@@ -1,0 +1,59 @@
+<ion-view title="Create News or Event">
+    <ion-content>
+        <div class="list">
+            <form name="eventForm">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label custom">Title</span>
+                    <input type="text" name="eventName" placeholder="Title" ng-model="newEvent.Name">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label custom">Description</span>
+                    <textarea placeholder="Write Description, Add Links etc." name="eventDescription" rows="5" class="textArea" ng-model="newEvent.Description"></textarea>
+                </label>
+                <label class="item item-input item-stacked-label" style="overflow: initial;">
+                    <span class="input-label custom">Add Video&nbsp;<i class="icon ion-help-circled event-help-icon" tooltips tooltip-side="'right'" tooltip-template="Step 1: Open YouTube app<br/>Step 2: Select desired video<br/>Step 3: Tap on Share button<br/>Step 4: Copy Link & paste here."></i></span>
+                    <input type="text" name="eventVideoUrl" placeholder="Video URL" ng-model="newEvent.VideoURL">
+                </label>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col custom" style="font-size:16px; padding-left:11px;">
+                Add Photos
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <button class="button button-custom" ng-click="capture(1)" style="width:100%">
+                    <i class="icon ion-camera"></i>&nbsp;Camera
+                </button>
+            </div>
+
+            <!-- <div class="col text-center">
+                <button class="button button-custom" ng-click="capture(2)" style="width:100%">
+                    <i class="icon ion-images"></i>&nbsp;Gallery
+                </button>
+            </div> -->
+        </div>
+        <div class="gallery-box" ng-if="newEvent.Images.length > 0">
+            <div class="gallery-item" ng-repeat="image in newEvent.Images">
+                <button class="button button-clear button-assertive image-delete-button" ng-click="removeImage($index)">
+                    <i class="icon ion-close-circled"></i>
+                </button>
+                <img ng-src="{{image.src}}" alt="No image detected" style="position: relative; top: -41px; width:100%;" ng-click="goToSlide($index)" />
+            </div>
+        </div>
+        <div class="list">
+            <div class="item item-button-right custom">
+                News or Event Date
+                <button class="button button-custom" ng-click="openDatePicker();">
+                    {{newEvent.EventDate | date: 'dd-MMM-yyyy'}}
+                </button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="bar-custom button-footer-bar custom-footer" style="padding:0;border:none;">
+        <button style="border-radius:0px;" class="button button-custom loginButton" ng-click="create()">
+            Create
+        </button>
+    </ion-footer-bar>
+</ion-view>

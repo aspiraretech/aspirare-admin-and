@@ -1,0 +1,44 @@
+<ion-view title="{{selectedCollege.CollegeName}}">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-icon ion-android-arrow-dropdown" ng-if="colleges.length > 1" ng-click="openPopover($event)"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="getAllStatistics()">
+        </ion-refresher>
+        <div class="row" ng-if="loggedInUser.PackageCode != 'LM'">
+            <div class="col">
+                <div class="row no-padding">
+                    <div class="col no-padding text-center">
+                        <span style="font-size:18px">Academic Performance</span>
+                    </div>
+                </div>
+                <div class="row no-padding">
+                    <div class="col no-padding text-center">
+                        <div class="current" ng-style="{'color':graph.color}" style="top: 83px; bottom: auto; font-size: 20px;">{{marksStatistics.Percentage | number: 1}}%</div>
+                        <round-progress max="100" current="marksStatistics.Percentage" color="{{graph.color}}" bgcolor="#eaeaea" radius="75" stroke="25" semi="false" rounded="false" clockwise="true" responsive="false" duration="1000" animation="easeInOutCirc" animation-delay="2">
+                        </round-progress>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:10px;" ng-if="selectedCollege.PackageCode != 'EXTENDED'">
+            <div class="col">
+                <div class="row no-padding">
+                    <div class="col no-padding text-center">
+                        <span style="font-size:18px">Attendance</span><br>
+                        <span style="font-size:12px; color:#666666">(Last 15 Days)</span>
+                    </div>
+                </div>
+                <highchart id="attendanceChart" config="attendance.ChartConfig"></highchart>
+            </div>
+        </div>
+    </ion-content>
+    <button class="button button-float button-custom" ng-click="openModal()">
+        <i class="icon ion-funnel"></i>
+    </button>
+    <div class="bar bar-footer bar-custom text-center" style="padding:0px 5px;">
+        <span style="font-size:14px;margin:auto;" ng-if="selected.courseId != null || selected.branchId != null || selected.semesterId != null || selected.classId != null">
+            {{courseName || 'All Selected'}} - {{branchName || 'All Selected'}} - {{semesterName || 'All Selected'}} - {{className || 'All Selected'}}
+        </span>
+    </div>
+</ion-view>

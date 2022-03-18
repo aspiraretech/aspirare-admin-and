@@ -1,0 +1,20 @@
+<ion-view title="Smart Assessments">
+    <ion-content class="smartTest-page">
+        <ion-list ng-if="smartTests.length > 0">
+            <ion-item class="item-text-wrap item-button-right" ng-repeat="test in smartTests | orderBy: '-CreatedAt'" ng-click="getAllTopicsForSmartTest(test)">
+                <h2>Smart Assessment - {{test.CreatedAt | date:'dd-MMM'}}</h2>
+                <button class="button button-assertive button-clear" ng-click="deleteSmartTest(test, $event)">
+                        <i class="icon ion-trash-b" style="margin:auto;"></i>
+                </button>
+            </ion-item>
+        </ion-list>
+        <div class="row" ng-if="smartTests.length == 0">
+            <div class="col text-center">
+                No assessments are pending!
+            </div>
+        </div>
+    </ion-content>
+    <a class="button button-float-enq button-custom" href="#/createSmartTest">
+        <i class="icon ion-plus-round"></i>
+    </a>
+</ion-view>

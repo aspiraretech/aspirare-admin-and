@@ -1,0 +1,13 @@
+<ion-view title="Choose a {{keywords.SubjectKeyword}}">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="getAllSubjects()">
+        </ion-refresher>
+        <div class="list">
+            <a class="item item-icon-right" href ng-repeat="subject in user.Subjects" ng-click="subjectSelected(subject)">
+                <h2>{{subject.Name}}</h2>
+                <p style="overflow: initial;white-space: normal;text-overflow: initial;">{{subject.BranchName}} | {{subject.SemesterName}} | {{subject.ClassName}}</p>
+                <i class="icon ion-chevron-right custom"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

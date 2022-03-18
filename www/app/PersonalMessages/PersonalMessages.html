@@ -1,0 +1,23 @@
+<ion-view title="{{student.Name}}">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="getAllMessages()">
+        </ion-refresher>
+        <ol class="messages">
+            <li ng-repeat="message in messages" ng-class="{'messages-mine': (loggedInUser.Id == message.UserId), 'messages-others': (loggedInUser.Id != message.UserId)}">
+                <span compile="message.MessageToShow"></span>
+            </li>
+        </ol>
+    </ion-content>
+    <ion-footer-bar class="bar-frosted">
+        <div class="row no-padding">
+            <div class="col col-90 no-padding">
+                <input type="text" ng-model="newMessage.Message" class="messageInput" placeholder="Type your message here...">
+            </div>
+            <div class="col no-padding">
+                <button class="button button-clear button-custom" ng-click="sendMessage()">
+                    <i class="icon ion-paper-airplane"></i>
+                </button>
+            </div>
+        </div>
+    </ion-footer-bar>
+</ion-view>

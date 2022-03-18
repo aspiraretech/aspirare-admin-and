@@ -1,0 +1,59 @@
+<ion-view title="Notifications">
+    <ion-content>
+        <ion-list class="collapsible-list">
+            <div>
+                <ion-item class="item-stable" ng-click="toggle(1)" ng-class="{active: v1}">
+                    <i class="icon" ng-class="v1 ? 'ion-minus' : 'ion-plus'"></i> &nbsp; Notification Reminder
+                </ion-item>
+                <ion-item class="item-accordion" ng-show="v1">
+                    Send notification reminder to the students/parents!
+                    <button style="margin-top:15px;" class="button button-custom loginButton" ng-click="sendNotificationReminder()">Send Notification Reminder</button>
+                </ion-item>
+            </div>
+            <div ng-if="loggedInUser.PackageCode == 'SMART' || loggedInUser.PackageCode == 'LM' || loggedInUser.PackageCode == 'BASIC'">
+                <ion-item class="item-stable" ng-click="toggle(2)" ng-class="{active: v2}">
+                    <i class="icon" ng-class="v2 ? 'ion-minus' : 'ion-plus'"></i> &nbsp; Fees Reminder
+                </ion-item>
+                <ion-item class="item-accordion" ng-show="v2">
+                    Send fees reminder to the students/parents who are yet to pay the balance fees!
+                    <button style="margin-top:15px;" class="button button-custom loginButton" ng-click="sendFeesNotification()">Send Fees Reminder</button>
+                </ion-item>
+            </div>
+            <div>
+                <ion-item class="item-stable" ng-click="toggle(3)" ng-class="{active: v3}">
+                    <i class="icon" ng-class="v3 ? 'ion-minus' : 'ion-plus'"></i> &nbsp; Custom Notification
+                </ion-item>
+                <ion-item class="item-accordion" ng-show="v3" style="padding:0px;">
+                    <div class="list" style="margin-bottom:0px;">
+                        <form name="eventForm">
+                            <label class="item item-input item-stacked-label">
+                                <span class="input-label custom">Title</span>
+                                <input type="text" name="eventName" placeholder="Title" ng-model="notification.Title">
+                            </label>
+                            <label class="item item-input item-stacked-label">
+                                <span class="input-label custom">Description</span>
+                                <textarea placeholder="Description" name="eventDescription" rows="5" class="textArea" ng-model="notification.Description"></textarea>
+                            </label>
+                            <ion-checkbox ng-model="notification.SMSBroadcastAvailable" class="checkbox-custom" ng-true-value="true" ng-false-value="false" ng-if="loggedInUser.SMSBroadcastAvailable == '1'">
+                                <h2>Broadcast SMS</h2>
+                            </ion-checkbox>
+                        </form>
+                    </div>
+                    <div class="row no-padding">
+                        <div class="col text-center custom" style="font-size:14px;">
+                            <span ng-if="selected.courseId != null || selected.branchId != null || selected.semesterId != null || selected.classId != null">{{courseName || 'All Selected'}} - {{branchName || 'All Selected'}} - {{semesterName || 'All Selected'}} - {{className || 'All Selected'}}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="button button-custom loginButton" ng-click="openModal()">Filter</button>
+                        </div>
+                        <div class="col">
+                            <button class="button button-custom loginButton" ng-click="sendCustomNotification()">Send</button>
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

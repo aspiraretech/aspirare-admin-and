@@ -1,0 +1,35 @@
+<ion-view title="Create Route">
+    <ion-content>
+        <div class="list">
+            <form name="routeForm">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label custom">Route Number*</span>
+                    <input type="text" name="routeNumber" placeholder="Route Number" ng-model="newRoute.RouteNumber">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label custom">Vehicle Registration Number*</span>
+                    <input type="text" name="regNumber" placeholder="Vehicle Registration Number" ng-model="newRoute.VehicleRegNumber">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label custom">Areas Covered*</span>
+                    <textarea placeholder="Areas Covered" name="eventDescription" rows="5" class="textArea" ng-model="newRoute.AreasCovered"></textarea>
+                </label>
+                <label class="item item-input item-select">
+                    <div class="input-label custom">
+                        Select Staff
+                    </div>
+                    <select ng-model="newRoute.UserId" ng-options="user.Id as user.Name for user in users">
+                        <option value="">--choose staff--</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="button button-custom loginButton" ng-click="create()">
+                    Create
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

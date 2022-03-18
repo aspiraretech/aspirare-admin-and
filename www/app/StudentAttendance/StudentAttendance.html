@@ -1,0 +1,26 @@
+<ion-view title="{{keywords.SubjectKeyword}} Attendance ({{totalPresent}}/{{attendance.length}})">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="att in attendance | orderBy: '-AttendanceDate'">
+                <div class="item-checkbox">
+                    <label class="checkbox checkbox-custom checkbox-square">
+                        <input type="checkbox" class="checkbox-custom" ng-model="att.IsPresent" ng-true-value="true" ng-false-value="false" ng-change="attendanceChange(att)">
+                    </label> {{att.AttendanceDate | date: 'dd-MMM'}}
+                    <span class="item-note scorecard-note">
+                        <span class="balanced" ng-show="att.IsPresent">Present</span>
+                    <span class="assertive" ng-hide="att.IsPresent">Absent</span>
+                    </span>
+                </div>
+            </ion-item>
+        </ion-list>
+        <!-- <div class="list" ng-if="!isEdit">
+            <div class="item" ng-repeat="atte in attendance | orderBy: '-AttendanceDate'">
+                {{atte.AttendanceDate | date: 'dd/MMM/yyyy'}}
+                <span class="item-note scorecard-note">
+                    <span class="balanced" ng-show="atte.IsPresent">Present</span>
+                <span class="assertive" ng-hide="atte.IsPresent">Absent</span>
+                </span>
+            </div>
+        </div> -->
+    </ion-content>
+</ion-view>
