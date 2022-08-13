@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CordovaLib/android.CordovaLib.iml" filepath="$PROJECT_DIR$/.idea/modules/CordovaLib/android.CordovaLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Admin.iml" filepath="$PROJECT_DIR$/.idea/modules/Admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CordovaLib/Admin.CordovaLib.iml" filepath="$PROJECT_DIR$/.idea/modules/CordovaLib/Admin.CordovaLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Admin.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Admin.app.iml" />
     </modules>
   </component>
 </project>

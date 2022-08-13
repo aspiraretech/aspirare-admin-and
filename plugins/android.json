@@ -7,32 +7,17 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.aspirare.admin"
-    },
-    "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.aspirare.admin"
-    },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.aspirare.admin"
-    },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.aspirare.admin"
-    },
-    "cordova-plugin-ionic-webview": {
-      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
-      "PACKAGE_NAME": "com.aspirare.admin"
-    },
-    "cordova-plugin-ionic-keyboard": {
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
       "PACKAGE_NAME": "com.aspirare.admin"
     },
     "cordova-plugin-console": {
       "PACKAGE_NAME": "com.aspirare.admin"
     },
-    "cordova-plugin-file": {
+    "cordova-plugin-device": {
       "PACKAGE_NAME": "com.aspirare.admin"
     },
-    "cordova-plugin-file-transfer": {
+    "cordova-plugin-file": {
       "PACKAGE_NAME": "com.aspirare.admin"
     },
     "cordova-plugin-image-picker": {
@@ -41,14 +26,23 @@
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.aspirare.admin"
     },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.aspirare.admin"
+    },
+    "cordova-plugin-ionic-webview": {
+      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
+      "PACKAGE_NAME": "com.aspirare.admin"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.aspirare.admin"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.aspirare.admin"
+    },
     "cordova-plugin-x-socialsharing": {
       "PACKAGE_NAME": "com.aspirare.admin"
     },
     "ionic-plugin-keyboard": {
-      "PACKAGE_NAME": "com.aspirare.admin"
-    },
-    "cordova-plugin-camera": {
-      "ANDROID_SUPPORT_V4_VERSION": "27.+",
       "PACKAGE_NAME": "com.aspirare.admin"
     }
   },

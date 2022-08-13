@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml:20:1-23:12
-INJECTED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml:20:1-23:12
-INJECTED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml:20:1-23:12
+ADDED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml:20:1-22:12
+INJECTED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml:20:1-22:12
+INJECTED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml:20:1-22:12
 	package
 		ADDED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml:21:7-35
 		INJECTED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml
@@ -14,10 +14,10 @@ INJECTED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\Co
 	android:versionCode
 		ADDED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml:21:62-85
 uses-sdk
-ADDED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml:22:5-44
-INJECTED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml:22:5-44
-INJECTED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml:22:5-44
+INJECTED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml
+INJECTED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml:22:15-41
 		INJECTED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml
+		ADDED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml
 		INJECTED from C:\Abhi\Findinbox\Aspirare\aspirare-admin-and\platforms\android\CordovaLib\AndroidManifest.xml
